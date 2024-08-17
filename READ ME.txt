@@ -1,0 +1,33 @@
+READ ME
+
+We decided to remake Tetris utilizing the Pygame library.
+
+While we didn't include every feature of the original game,
+we tried to implement the most essential/fun.
+That includes rotating the pieces via the up arrow key, 
+moving the piece a little quicker using the down arrow key, 
+and having a soundtrack play while the game runs. 
+The side arrow keys shift the piece from left to right on the grid. 
+When a line is filled with the pieces, it is cleared, and 100 points are added to your score 
+on the right side, where it is displayed. If the pieces begin to stack up and reach where the 
+pieces are created, a game over screen appears. The game over screen also instructs you to press
+the spacebar to restart the game if you want. Due to a significant underestimation of the complexity
+of Tetris, our AI implementation was waived.
+
+The gimmick with how we created Tetris is implementing an array back grid, a two-dimensional list that
+ stores values in “rows. The tetrominoes are represented as strings that look like Tetris pieces. 
+ The two-dimensional lists allow multiple states for each piece to allow us to rotate the shape easily. 
+ Using Pygame, we can make a Tetris screen that includes grid boxes that can store colors, allowing us 
+ to represent a shape in its place. Drawing the shapes on the screen involves iterating through the shape 
+ lists and converting the strings into pieces on the board. Clearing the lines, locking pieces, and inserting 
+ new shapes on the grid all involve modifying the array back grid. We have a driver method that enables the game 
+ to run and allows the user to use the arrow keys and spacebar to play the game via the Pygame library.
+
+The Tetris game works overall. The scoring, game-over status, and restarting of the game are functional.
+We werent able to implement a menu screen or a difficulty feature. Unfortunately, a known bug in our code removes all blocks if 3 lines or more are cleared at once, but it doesn’t break the game.
+
+Heres instructions on how to run our game:
+In the terminal run this command: python3 -m pip install -U pygame
+
+Click on tetris.py.
+Run the game.
